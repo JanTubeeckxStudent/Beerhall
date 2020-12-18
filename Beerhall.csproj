@@ -10,6 +10,7 @@
     <Folder Include="Data\" />
     <Folder Include="Data\Mappers\" />
     <Folder Include="Views\Brewer\" />
+    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
