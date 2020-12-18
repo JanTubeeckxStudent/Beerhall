@@ -14,10 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Models\Domain\" />
+    <ProjectReference Include="..\Beerhall.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Beerhall.csproj" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Domain\" />
   </ItemGroup>
 </Project>
