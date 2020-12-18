@@ -9,7 +9,7 @@
     <Folder Include="Models\Domain\" />
     <Folder Include="Data\" />
     <Folder Include="Data\Mappers\" />
-    <Folder Include="Data\Repositories\" />
+    <Folder Include="Views\Brewer\" />
   </ItemGroup>
 
   <ItemGroup>
