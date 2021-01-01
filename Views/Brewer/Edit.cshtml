@@ -3,11 +3,11 @@
 *@
 @model Beerhall.Models.ViewModels.BrewerEditViewModel; 
 @{
-    ViewData["Title"] = "Edit brewer";
+    ViewData["Title"] = (bool)ViewData["IsEdit"] ? "Edit brewer" : "Create Brewer" ;
 }
 <h2>@ViewData["Title"]</h2>
 
-<form asp-action="Edit" method="post">
+<form method="post">
     <div class="form-group">
         <label asp-for="Name"></label>
         <input asp-for="Name" class="form-control" />
