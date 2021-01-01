@@ -39,5 +39,16 @@ namespace Beerhall.Controllers
                 nameof(Location.Name));
             return View(new BrewerEditViewModel(brewer));
         }
+
+        [HttpPost]
+        public IActionResult Edit(BrewerEditViewModel brewerEditViewModel, int id) {
+            Brewer brewer = _brewerRepository.GetBy(id);
+            brewer.Name = brewerEditViewModel.Name;
+            brewer.Street = brewerEditViewModel.Street;
+            brewer.Location = brewerEditViewModel.PostalCode == null ? null : _locationRepository.GetBy(brewerEditViewModel.PostalCode);
+            brewer.Turnover = brewerEditViewModel.Turnover;
+            _brewerRepository.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

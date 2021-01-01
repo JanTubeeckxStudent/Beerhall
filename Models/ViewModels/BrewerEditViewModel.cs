@@ -10,7 +10,12 @@ namespace Beerhall.Models.ViewModels
         public string PostalCode { get; set; }
         public int? Turnover { get; set; }
 
-        public BrewerEditViewModel(Brewer brewer)
+        public BrewerEditViewModel()
+        {
+
+        }
+
+        public BrewerEditViewModel(Brewer brewer) : this()
         {
             Name = brewer.Name;
             Street = brewer.Street;
