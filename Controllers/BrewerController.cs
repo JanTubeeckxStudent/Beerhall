@@ -78,8 +78,10 @@ namespace Beerhall.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
+            Brewer brewer = _brewerRepository.GetBy(id);
             _brewerRepository.Delete(_brewerRepository.GetBy(id));
             _brewerRepository.SaveChanges();
+            TempData["message"] = $"You succesfully deleted brewer {brewer.Name}";
             return RedirectToAction(nameof(Index));
         }
 
